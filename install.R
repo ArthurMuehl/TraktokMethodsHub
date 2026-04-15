@@ -1,2 +1,2 @@
-# Install traktok development version
-remotes::install_github("JBGruber/traktok")
+# Install traktok
+install.packages("traktok")
