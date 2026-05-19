@@ -95,7 +95,6 @@ library("traktok")
 library("cookiemonster")
 
 #Making chromote usable inside this interactive environment
-chromote::local_chrome_version("latest-stable", binary = "chrome-headless-shell")
 chromote::set_chrome_args(c("--no-sandbox", chromote::default_chrome_args()))
 ```
 
