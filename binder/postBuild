@@ -57,6 +57,19 @@ echo
 # install required python packages
 python3 -m pip install jupyterlab-quarto==0.1.45
 
+# Fetch Google Chrome .deb and extract it into the user's home
+# (dpkg-deb -x extracts only — no system install, no root needed)
+curl -fL -o /tmp/chrome.deb \
+  https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+mkdir -p "$HOME/.local/chrome"
+dpkg-deb -x /tmp/chrome.deb "$HOME/.local/chrome"
+rm /tmp/chrome.deb
+
+# Tell chromote where to find it, persistently for this user
+echo "CHROMOTE_CHROME=$HOME/.local/chrome/opt/google/chrome/google-chrome" \
+  >> "$HOME/.Renviron"
+
+
 echo
 echo Completed
 echo
