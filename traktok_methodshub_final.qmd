@@ -207,7 +207,7 @@ tibble::tibble(
 To retrieve basic information about an account, use tt_user_info_hidden(). This can be useful if you want to inspect account-level metadata before deciding whether to collect additional material.
 
 ```{r, eval=FALSE}
-u <- tt_user_info("statisticsglobe")
+u <- tt_user_info_hidden("statisticsglobe")
 dplyr::glimpse(u)
 ```
 
