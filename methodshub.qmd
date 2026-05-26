@@ -122,19 +122,14 @@ Follow these steps before running the code below:
    for Firefox.
 3. Export the cookies for `tiktok.com`. The file is typically named
    `www.tiktok.com_cookies.txt`.
-4. **Upload the file to this session** using the file browser (RStudio:
-   *Files* pane → *Upload*; Jupyter: folder icon in the left sidebar) or add them to your local working directory, when running this document locally.
+4. **Store the file in your working directory** and load it using the package cookiemonster.
 
-Once the file is uploaded and visible in your working directory, run:
+Once the file is visible in your working directory, run:
 
 ```{r, eval=FALSE}
 cookiemonster::add_cookies("www.tiktok.com_cookies.txt")
 auth_check()
 ```
-
-> **Note:** Uploaded files are not retained between sessions. Keep your
-> exported cookies file somewhere easy to find on your computer so you can
-> re-upload it next time.
 
 ## Examples
 
